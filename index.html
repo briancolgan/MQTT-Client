@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Internet of Things</title>
+  <link rel='shortcut icon' type='image/x-icon' href='./favicon.gif' />
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>URL:</td>
+      <td><textarea id="url" rows=1 cols=30>m21.cloudmqtt.com</textarea></td>
+      <td>Websockets Port:</td><td><textarea id="port" rows=1 cols=6>37419</textarea></td>
+    </tr>
+    <tr>
+      <td>Username:</td>
+      <td><textarea id="username" rows=1 cols=30>IoT_Data</textarea></td>
+      <td rowspan="2" colspan="2" class="midAlign"></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td><textarea id="password" rows=1 cols=30>dt021a</textarea></td>
+    </tr>
+    <tr>
+      <td></td>
+      <th>Publish</th>
+      <td></td>
+      <th>Subscribe</th>
+    </tr>
+    <tr>
+      <td>Topic:</td>
+      <td><textarea id="topicP" rows=2 cols=30>home/kitchen/lightlevel</textarea></td>
+      <td>Topic:</td><td><textarea id="topicS" rows=2 cols=30>home/kitchen/lightlevel</textarea></td>
+    </tr>
+    <tr>
+      <td>Message Out:</td>
+      <td><textarea id="msgP" rows=2 cols=30></textarea></td>
+      <td>Message In:</td><td><textarea readonly id="msgS" rows=10 cols=30></textarea></td>
+    </tr>
+  </table>
+  <div>
+    <button id = "connect" >1. Connect</button>
+    <button id = "customSubscribe" >2. Subscribe</button>
+    <button id = "customPublish" >3. Publish</button>
+    <button id = "disconnect" >4. Disconnect</button>
+  </div>
+  <script type="text/javascript" src="js/mqttws31.js" ></script>
+  <script type="text/javascript" src="js/MQTTcode.js"></script>
+</body>
+</html>
